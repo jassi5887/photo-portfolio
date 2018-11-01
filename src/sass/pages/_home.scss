@@ -1,0 +1,108 @@
+.hero {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+
+  &__next {
+    position: absolute;
+    bottom: 5rem;
+    padding: 1rem;
+    background-color: transparent;
+    color: #fff;
+    left: 50%;
+    animation: up-down-animate 1s ease infinite;
+    animation-fill-mode: backwards;
+    transform: translateX(-50%);
+    border-radius: 100rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(#000, .5);
+    z-index: 99;
+  }
+
+
+  &__bg-video {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#000, .9);
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50rem;
+      height: 100vh;
+      background-color: rgba(#000, .5);
+      z-index: 9;
+      position: relative;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      &__nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        background-color: rgba(#000, .3);
+
+        display: flex;
+        align-items: center;        
+        justify-content: space-around;
+        z-index: 99;
+
+        &__item {
+          color: #fff;
+          font-size: 1.6rem;
+          font-weight: bold;
+          letter-spacing: .2rem;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          text-transform: uppercase;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &__content > &__title,
+    &__content > &__subtitle {
+      color: #fff;
+      font-size: 2rem;
+      z-index: 9;
+      font-family: 'Pacifico', cursive;
+    }
+
+    &__content > &__title {
+      font-size: 5rem;
+    }
+  }
+
+  & video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    min-height: 100%;
+    //filter: contrast(1.4) saturate(1.8) sepia(.6);
+
+    @include respond(tab-land) {
+      width: auto;
+      min-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Pacifico');
+
+@import 'sass/animations/animations';
+
+@import 'sass/abstract/mixins';
+
+@import 'sass/base/normalize';
+@import 'sass/base/base';
+
+@import 'sass/components/grid';
+@import 'sass/components/top-nav';
+@import 'sass/components/projects';
+
+@import 'sass/pages/home';
+
+@import 'sass/utils/utils';

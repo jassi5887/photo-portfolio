@@ -1,0 +1,26 @@
+.row {
+  display: flex;
+  width: 100%;
+
+  & > .col-1 {
+    width: 100%;
+  }
+
+  & > .col-2 {
+    flex: 1 1 50%;
+  }
+
+  & > .col-3 {
+    flex: 1 1 33%;
+  }
+
+  @include respond(phone) {
+    flex-wrap: wrap;
+    
+    & > .col-1,
+    & > .col-2,
+    & > .col-3 {
+      flex: 0 0 100%;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.work-content{
+  padding: 7rem 2rem;
+  overflow-x: hidden;
+
+  @include respond(phone) {
+    padding: 7rem 0;
+  }
+}

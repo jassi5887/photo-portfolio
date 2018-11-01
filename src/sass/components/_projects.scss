@@ -1,0 +1,73 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__thumbnail {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 100%;
+    position: relative;
+    background-color: #000;
+
+    & > img,
+    & > video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--video {
+      height: 70rem;
+      padding: 0;
+    }
+
+  }
+
+  &__item {
+    margin: .4rem;
+    position: relative;
+    
+    &--gallery {
+
+    }
+
+    &--link {
+
+    }
+
+    @include respond(phone) {
+      margin: 0;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    // align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#000, .7);
+
+    height: 10rem;
+    width: 100%;
+    transition: height .4s;
+
+    &__content {
+      color: #fff;
+      padding: 1rem 2rem;
+      &__title {
+        font-size: 2.5rem;
+      }
+      &__subtext {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__thumbnail:hover &__overlay {
+    height: 100%;
+  }
+}
