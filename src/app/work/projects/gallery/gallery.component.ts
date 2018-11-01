@@ -22,12 +22,14 @@ export class GalleryComponent implements OnInit {
         {
             fullWidth: true,
             height: '100vh',
+            width: 'auto',
             imageSize: "contain",
             thumbnailsColumns: 4,
             imageSwipe: true,
             imageArrows: true,
             thumbnailsArrows: true,
             previewFullscreen: true,
+            // previewForceFullscreen: true,
             imageAnimation: NgxGalleryAnimation.Slide
         },
         // max-width 800

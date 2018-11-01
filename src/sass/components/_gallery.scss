@@ -22,4 +22,13 @@
     height: 10rem;
     background-color: rgba(#000, .9);
   }
+
+  &__close {
+    position: absolute;
+    right: 3rem;
+    top: 3rem;
+    color: white;
+    font-size: 4rem;
+    z-index: 9999;
+  }
 }
