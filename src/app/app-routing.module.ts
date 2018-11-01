@@ -5,15 +5,21 @@ import { WorkComponent } from './work/work.component';
 import { ProjectsComponent } from './work/projects/projects.component';
 import { ClientsComponent } from './work/clients/clients.component';
 import { ContactComponent } from './work/contact/contact.component';
+import { ProjectComponent } from './work/projects/project/project.component';
+import { GalleryComponent } from './work/projects/gallery/gallery.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'work',  component: WorkComponent, children: [
     { path: '', redirectTo: 'projects', pathMatch: 'full' },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'clients', component:  ClientsComponent}, 
-    { path: 'contact', component:  ContactComponent}
+    { path: 'projects', component: ProjectsComponent, children: [
+      { path: ':id', component: ProjectComponent, children: [
+        { path: 'gallery', component: GalleryComponent }
+      ]}
+    ]},
+    { path: 'clients', component: ClientsComponent}, 
+    { path: 'contact', component: ContactComponent}
   ]}
 ];
 

@@ -58,16 +58,42 @@
     &__content {
       color: #fff;
       padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+
       &__title {
         font-size: 2.5rem;
       }
+
       &__subtext {
         font-size: 1.6rem;
       }
     }
-  }
 
-  &__thumbnail:hover &__overlay {
-    height: 30%;
+    &__cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+
+      & > a {
+        border-radius: 100rem;
+        background-color: rgba(#fff, .8);
+        border: 1px solid  rgba(#000, .8);
+        color: #000;
+        font-size: 1.5rem;
+        padding: .5rem 1.5rem;
+        font-weight: 700;
+        transition: all .4s;
+
+        &:hover {
+          background-color: rgba(#000, .8);
+          color: #fff;
+          border: 1px solid #fff;
+        }
+      }
+    }
   }
 }

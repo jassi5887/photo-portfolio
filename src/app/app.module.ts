@@ -11,6 +11,11 @@ import { ProjectsComponent } from './work/projects/projects.component';
 import { ClientsComponent } from './work/clients/clients.component';
 import { ContactComponent } from './work/contact/contact.component';
 import { TopNavComponent } from './work/top-nav/top-nav.component';
+import { ProjectComponent } from './work/projects/project/project.component';
+import { GalleryComponent } from './work/projects/gallery/gallery.component';
+import { DataService } from './services/data.service';
+
+import { NgxGalleryModule } from 'ngx-gallery';
 
 
 @NgModule({
@@ -21,14 +26,17 @@ import { TopNavComponent } from './work/top-nav/top-nav.component';
     ProjectsComponent,
     ClientsComponent,
     ContactComponent,
-    TopNavComponent
+    TopNavComponent,
+    GalleryComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    NgxGalleryModule,
     AppRouting
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
