@@ -34,6 +34,10 @@ export class DataService {
         { 
           url: 'assets/images/projects/advertising_1/wall.jpg', 
           desc: 'some image desc' 
+        },
+        { 
+          url: 'assets/videos/traffic_disco.mp4', 
+          desc: 'some image desc' 
         }
       ]
     }
