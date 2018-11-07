@@ -1,6 +1,10 @@
 html {
   font-size: 62.5%;
   font-family: 'Inconsolata', monospace;
+  
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 
 body, div {

@@ -1,0 +1,42 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 3.5rem;
+
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 2rem;
+    align-items: center;
+
+    & > h1 {
+      font-size: 5rem;
+      margin-left: 2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      @include respond(phone) {
+        margin-left: 0;
+      }
+    }
+
+    & > &__cta {
+      margin-left: 2rem;
+      color: #fff;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      border-radius: 100rem;
+      background-color: #000;
+      transition: all .4s;
+
+      &:hover {
+        color: #000;
+        background-color: #fff;
+      }
+    }
+  }
+}

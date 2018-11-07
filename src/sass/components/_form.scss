@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  
+  padding: 0 2rem;
+  flex-wrap: wrap;
+
+  &__group {
+    position: relative;
+    flex: 1 1 100%;
+    margin: .5rem 0;
+  }
+
+  &__control {
+    height: 7rem;
+    width: 100%;
+    font-size: 2rem;
+    color: #888;
+    padding: 2rem;
+  }
+
+  &__label {
+    position: absolute;
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    height: 7rem;
+    border-radius: 0;
+    border: 0;
+    font-size: 2rem;
+    transition: all .4s;
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

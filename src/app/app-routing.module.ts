@@ -3,7 +3,6 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { WorkComponent } from './work/work.component';
 import { ProjectsComponent } from './work/projects/projects.component';
-import { ClientsComponent } from './work/clients/clients.component';
 import { ContactComponent } from './work/contact/contact.component';
 import { ProjectComponent } from './work/projects/project/project.component';
 import { GalleryComponent } from './work/projects/gallery/gallery.component';
@@ -18,7 +17,6 @@ const appRoutes: Routes = [
         { path: 'gallery', component: GalleryComponent }
       ]}
     ]},
-    { path: 'clients', component: ClientsComponent}, 
     { path: 'contact', component: ContactComponent}
   ]}
 ];
