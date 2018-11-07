@@ -63,12 +63,13 @@
         backface-visibility: hidden;
         background-color: rgba(#000, .7);
         z-index: 1;
-        transition: all .4s;
+        transition: all .2s;
       }
 
       &:hover > &__overlay{
          width: 90%;
         height: 90%;
+        border: 2rem solid #fff;
       }
     }
   }
